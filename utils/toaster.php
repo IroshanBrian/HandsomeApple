@@ -9,6 +9,6 @@ if (!empty($message)): ?>
                "positionClass": "toast-top-right",
                "timeOut": "3000"
           };
-          toastr.success("<?php echo htmlspecialchars($message); ?>");
+          toastr.error("<?php echo htmlspecialchars($message); ?>");
      </script>
 <?php endif; ?>

@@ -1,21 +1,19 @@
 <?php
 session_start();
 include './../utils/db.php';
-function login($username, $password)
-{
-     $validUser = "admin";
-     $hashedPass = password_hash("password", PASSWORD_DEFAULT);
+// function login($username, $password)
+// {
+//      $validUser = "admin";
+//      $hashedPass = password_hash("password", PASSWORD_DEFAULT);
 
-     if ($username === $validUser && password_verify($password, $hashedPass)) {
-          $_SESSION['user'] = $username;
-          return "Login successful!";
-     } else {
-          return "Invalid credentials!";
-     }
-}
+//      if ($username === $validUser && password_verify($password, $hashedPass)) {
+//           $_SESSION['user'] = $username;
+//           return "Login successful!";
+//      } else {
+//           return "Invalid credentials!";
+//      }
+// }
 
-
-// Function to handle user signup
 function signup($name, $email, $number, $password)
 {
      global $pdo;
