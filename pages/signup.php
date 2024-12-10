@@ -1,6 +1,6 @@
 <?php
 $title = "Sign Up | SneakerHub";
-include './utils/header.php';
+include './../utils/header.php';
 ?>
 
 <body class="bg-gray-100 flex items-center justify-center h-screen">
@@ -19,7 +19,11 @@ include './utils/header.php';
                     $password = $_POST['password'] ?? '';
 
                     $result = signup($name, $email, $number, $password);
-                    echo $result;
+
+                    $_SESSION['message'] = $result;
+
+                    header('Location: login.php');
+                    exit();
                }
                ?>
                <input
@@ -63,6 +67,5 @@ include './utils/header.php';
           </div>
      </div>
 </body>
-
 
 </html>

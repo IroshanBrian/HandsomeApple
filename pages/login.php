@@ -1,7 +1,8 @@
 <?php
 session_start();
 $title = "Login | SneakerHub";
-include './utils/header.php';
+include './../utils/header.php';
+include './../utils/sessionMsg.php';
 ?>
 
 <body class="bg-gray-100 flex items-center justify-center h-screen">
@@ -45,5 +46,10 @@ include './utils/header.php';
           </div>
      </div>
 </body>
+
+
+<?php
+include './../utils/toaster.php';
+?>
 
 </html>
